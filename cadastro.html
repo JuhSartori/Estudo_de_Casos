@@ -1,0 +1,186 @@
+<!-- Juliana Sartori -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgb(50, 50, 54);
+        background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2097942-creative-minimal-geometric-with-dynamic-shapes-technology-abstract-background-wallpaper-gr%C3%A1tis-vetor.jpg);
+        background-size: 1545px 755px;
+        text-align: left;
+      }
+
+      .box {
+        margin-top: 3rem;
+        background: #d0d0d0;
+        padding: 10px; 
+        border-radius: 15px; 
+        width: 32%; 
+        color: rgb(255, 255, 255); 
+      }
+      fieldset {
+        border: none;
+      }
+      legend {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #34495e;
+      }
+      .inputBox {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .inputUser {
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgb(186 186 186);
+        outline: none;
+        color: rgb(0 0 0);
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+      .labelsobe {
+        position: absolute;
+        top: 0px; 
+        left: 0px; 
+        pointer-events: none;
+        transition: 5px;
+      }
+      .inputUser:focus ~ .labelsobe,
+      .inputUser:valid ~ .labelsobe {
+        top: -20px; 
+        font-size: 12px;
+        color: #34495e; 
+      }
+      #submit {
+        background-image: linear-gradient(
+          to right,
+          rgb(37, 37, 37),
+          rgb(0, 0, 0)
+        );
+        width: 90%;
+        border: none;
+        padding: 10px;
+        color: rgb(255, 255, 255); 
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.5s ease all;
+      }
+      #submit:hover {
+        background-image: linear-gradient(
+          to right,
+          rgb(255, 255, 255),
+          #34495e
+        ); 
+        transform: scale(1.1);
+      }
+      .box {
+        width: 50%;
+      }
+      @media screen and (max-width: 992px) {
+        .box {
+          width: 75%;
+        }
+      }
+      @media screen and (max-width: 771px) {
+        .box {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Detran MG</h1>
+    <div style="display: flex; justify-content: center">
+      <div class="box">
+        <form action="">
+          <legend>
+            <b> Formulário de Cadastro </b>
+          </legend>
+          <br />
+          <!--NOME-->
+          <div class="inputBox">
+            <input
+              type="text"
+              name="Nome"
+              id="nome"
+              class="inputUser"
+              required
+            />
+            <label for="nome" class="labelsobe"> Nome </label>
+          </div>
+          <!--IDADE-->
+          <div class="inputBox">
+            <input
+              type="number"
+              name="idade"
+              id="idade"
+              class="inputUser"
+              required
+            />
+            <label for="idade" class="labelsobe"> Idade </label>
+          </div>
+          <!--Profissao-->
+          <div class="inputBox">
+            <input
+              type="text"
+              name="prof"
+              id="prof"
+              class="inputUser"
+              required
+            />
+            <label for="prof" class="labelsobe"> Profissão </label>
+          </div>
+          <!--Email-->
+          <div class="inputBox">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="inputUser"
+              required
+            />
+            <label for="email" class="labelsobe"> Email </label>
+          </div>
+          <!--Telefone-->
+          <div class="inputBox">
+            <input
+              type="tel"
+              name="telefone"
+              id="telefone"
+              class="inputUser"
+              required
+            />
+            <label for="telefone" class="labelsobe"> Telefone </label>
+          </div>
+          <!--DATA-->
+          <div class="inputBox">
+            <input
+              name="dataPreenchimento"
+              onfocus="(this.type='date')"
+              onblur="if(!this.value)this.type='text'"
+              id="dataPreenchimento"
+              class="inputUser"
+              required
+            />
+            <label for="dataPreenchimento" class="labelsobe">
+              Data de Preenchimento
+            </label>
+          </div>
+          <div style="text-align: center">
+            <input type="submit" name="submit" id="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
